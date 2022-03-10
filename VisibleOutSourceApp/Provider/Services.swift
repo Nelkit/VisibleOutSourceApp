@@ -7,11 +7,9 @@
 import Foundation
 
 class Services :  NSObject {
-    private let baseURL = "https://jsonplaceholder.typicode.com/"
-    
     
     func getPostList(completion : @escaping ([Post]) -> ()){
-        guard let postURL = URL(string: "\(baseURL)posts") else { return }
+        guard let postURL = URL(string: "\(Constants.baseURL)posts") else { return }
         
         URLSession.shared.dataTask(with: postURL) { (data, urlResponse, error) in
             if let data = data {
@@ -24,7 +22,7 @@ class Services :  NSObject {
     }
     
     func getCommentsByPost(postId: Int, completion : @escaping ([Comment]) -> ()){
-        guard let postURL = URL(string: "\(baseURL)posts/\(postId)/comments") else { return }
+        guard let postURL = URL(string: "\(Constants.baseURL)posts/\(postId)/comments") else { return }
         
         URLSession.shared.dataTask(with: postURL) { (data, urlResponse, error) in
             if let data = data {
@@ -37,7 +35,7 @@ class Services :  NSObject {
     }
     
     func getAlbumByPost(postId: Int, completion : @escaping ([Photo]) -> ()){
-        guard let postURL = URL(string: "\(baseURL)posts/\(postId)/photos") else { return }
+        guard let postURL = URL(string: "\(Constants.baseURL)posts/\(postId)/photos") else { return }
         
         URLSession.shared.dataTask(with: postURL) { (data, urlResponse, error) in
             if let data = data {

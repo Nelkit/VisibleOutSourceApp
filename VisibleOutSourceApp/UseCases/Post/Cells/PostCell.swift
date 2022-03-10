@@ -27,14 +27,14 @@ class PostCell: UITableViewCell {
     
     @IBAction func goToAlbumAction(_ sender: Any) {
         guard let postId = post?.id else {return}
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "AlbumView") as? AlbumView
+        let vc = UIStoryboard.init(name: Constants.storyboardName, bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.views.albumView) as? AlbumView
         vc?.postId = postId
         nc?.pushViewController(vc!, animated: true)
     }
     
     @IBAction func goToCommentAction(_ sender: Any) {
         guard let postId = post?.id else {return}
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CommentView") as? CommentView
+        let vc = UIStoryboard.init(name: Constants.storyboardName, bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.views.commentView) as? CommentView
         vc?.postId = postId
         nc?.pushViewController(vc!, animated: true)
     }
