@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="132" id="KGk-i7-Jjw" customClass="CommentCell" customModule="VisibleOutSourceApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="483" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="483" height="132"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNs-MY-J1j" customClass="BoxView" customModule="VisibleOutSourceApp" customModuleProvider="target">
+                        <rect key="frame" x="20" y="16" width="443" height="60.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdJ-CR-BoS">
+                                <rect key="frame" x="20" y="20" width="403" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="CdJ-CR-BoS" firstAttribute="top" secondItem="HNs-MY-J1j" secondAttribute="top" constant="20" id="6AB-kn-5eP"/>
+                            <constraint firstAttribute="bottom" secondItem="CdJ-CR-BoS" secondAttribute="bottom" constant="20" id="9fW-uM-UeR"/>
+                            <constraint firstAttribute="trailing" secondItem="CdJ-CR-BoS" secondAttribute="trailing" constant="20" id="Sls-Jb-gfJ"/>
+                            <constraint firstItem="CdJ-CR-BoS" firstAttribute="leading" secondItem="HNs-MY-J1j" secondAttribute="leading" constant="20" id="m3O-hn-vX6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="elevate">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.45638517723089661" green="0.63440620232669431" blue="0.53058428056135654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Va-BG-e2N">
+                        <rect key="frame" x="422" y="86.5" width="41" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HNs-MY-J1j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9CI-FC-huH"/>
+                    <constraint firstAttribute="trailing" secondItem="HNs-MY-J1j" secondAttribute="trailing" constant="20" id="J6e-YG-eka"/>
+                    <constraint firstAttribute="bottom" secondItem="3Va-BG-e2N" secondAttribute="bottom" constant="10" id="K8a-wp-2hH"/>
+                    <constraint firstItem="3Va-BG-e2N" firstAttribute="top" secondItem="HNs-MY-J1j" secondAttribute="bottom" constant="10" id="MeI-tO-FUa"/>
+                    <constraint firstItem="3Va-BG-e2N" firstAttribute="trailing" secondItem="HNs-MY-J1j" secondAttribute="trailing" id="au6-F2-4j7"/>
+                    <constraint firstItem="HNs-MY-J1j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="cW4-jO-4DK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="commentLabel" destination="CdJ-CR-BoS" id="djd-2M-aBY"/>
+                <outlet property="emailLabel" destination="3Va-BG-e2N" id="WXn-bC-dxG"/>
+                <outlet property="leadingConstraint" destination="9CI-FC-huH" id="cPP-5G-nhl"/>
+                <outlet property="trailingConstraint" destination="J6e-YG-eka" id="eGn-X0-Koq"/>
+            </connections>
+            <point key="canvasLocation" x="252.89855072463769" y="22.098214285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.67500001192092896" green="0.92900002002716064" blue="0.77600002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
